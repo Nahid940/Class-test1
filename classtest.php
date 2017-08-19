@@ -46,20 +46,31 @@
             </div>
 
             <div class="form-group">
-                <label for="optradio">Select your gender  </label>
-                <label class="radio-inline">
-                    <input type="radio" name="optradio" value="male">Male
+               <table>
+                   <tr>
+                       <td><label for="optradio">Select your gender : </label></td>
+                       <td> <label class="radio-inline">
+                    <input type="radio" name="optradio" value="male"> Male
                 </label>
+                  </td>
+                  <td>
                 <label class="radio-inline">
-                    <input type="radio" name="optradio" value="female">Female
-                </label>
+                     <input type="radio" name="optradio" value="female">Female
+                </label> 
+                  </td>
+                   </tr>
+               </table>
+                
+               
+                
             </div>
 
             <div class="form-group">
-                <label for="hobby" >Choose your hobbies:</label>
-
-
-                <div class="checkbox-inline">
+               <table>
+                   <tr>
+                       <td><label for="hobby" >Choose your hobbies:</label></td>
+                       <td>
+                           <div class="checkbox-inline">
                     <label><input type="checkbox" name="hobby[]" value="Cricket">Cricket1</label>
                 </div>
                 <div class="checkbox-inline">
@@ -68,11 +79,22 @@
                 <div class="checkbox-inline">
                     <label><input type="checkbox" name="hobby[]" value="Dancing" >Dancing</label>
                 </div>
+                       </td>
+                   </tr>
+               </table>
+                
+                
             </div>
 
             <div class="form-group">
-                <label for="mobile" >Choose your profile pic:</label>
-                <input type="file" class="form-control" id="image"  name="image">
+               <table>
+                   <tr>
+                       <td> <label for="mobile" >Choose your profile pic:</label></td>
+                       <td> <input type="file" class="form-control" id="image"  name="image"></td>
+                   </tr>
+               </table>
+               
+               
             </div>
 
             <div class="form-group">
@@ -129,7 +151,7 @@
                 
             </div>
 
-            <div class="form-group">
+            <div class="form-group pull-right ">
                 <button type="submit" class="btn btn-success" name="register">Register me</button>
                 <button type="submit"  class="btn btn-danger" name="Reset">Reset</button>
             </div>
