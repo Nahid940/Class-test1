@@ -8,17 +8,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <style>
-        .address{
-            height: 50px;
+        .width{
+            width: 50%;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
+<div class="container width">
     <h2></h2>
-    <div class="col-md-3"></div>
-    <div class="col-md-6">
+<!--    <div class="col-md-3"></div>-->
+<!--    <div class="col-md-6">-->
         <form class="form-horizontal" action="register.php" method="post" enctype="multipart/form-data">
             <div class="form-group ">
                 <label for="name">Enter your name:</label>
@@ -66,7 +66,7 @@
                     <label><input type="checkbox" name="hobby[]"  value="Singing">Singing</label>
                 </div>
                 <div class="checkbox-inline">
-                    <label><input type="checkbox" name="hobby[]" value="Dancing" disabled>Dancing</label>
+                    <label><input type="checkbox" name="hobby[]" value="Dancing" >Dancing</label>
                 </div>
             </div>
 
@@ -76,8 +76,10 @@
             </div>
 
             <div class="form-group">
-                <label for="mobile" >Select your DOB:</label>
-                <select class="form-control" id="date" name="day">
+                <label for="" >Choose your Date of birth:</label>
+               <table>
+                   <tr>
+                       <td><select class="form-control" id="date" name="day">
                     <option >Day</option>
                     <?php
                         for($i=1;$i<30;$i++){
@@ -85,8 +87,10 @@
                         }
                     ?>
                 </select>
-
-                <select class="form-control" id="month" name="month">
+                  </td>
+                      
+                  <td>
+                       <select class="form-control" id="month" name="month">
                     <option >Month</option>
                     <?php
                     for($i=1;$i<12;$i++){
@@ -94,8 +98,10 @@
                     }
                     ?>
                 </select>
-
-                <select class="form-control" id="year" name="year">
+                  </td>
+                  
+                  <td>
+                    <select class="form-control" id="year" name="year">
                     <option >Year</option>";
                     <option value='2000'>2000</option>
                     <option value='2001'>2001</option>
@@ -116,6 +122,11 @@
                     <option value='2016'>2016</option>
                     <option value='2017'>2017</option>
                 </select>
+                      
+                  </td>
+                   </tr>
+               </table>
+                
             </div>
 
             <div class="form-group">
@@ -123,7 +134,7 @@
                 <button type="submit"  class="btn btn-danger" name="Reset">Reset</button>
             </div>
         </form>
-    </div>
+<!--    </div>-->
 
 </div>
 

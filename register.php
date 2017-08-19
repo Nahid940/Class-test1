@@ -11,10 +11,11 @@ if(isset($_POST['register'])){
      $img_name= $_FILES['image']['name'];
 
      //Upload file to the specific folder
-     move_uploaded_file($tmp_name,'uploads/'.$img_name);
+     move_uploaded_file($tmp_name,'upload/'.$img_name);
 	 
 	 $dob=$_POST['day']."-".$_POST['month']."-".$_POST['year'];
 	 echo "<pre>
+    Profile picture :<img src='upload/$img_name' height='100px' width='100px'>
 	Name: $name;
 	Email: $email;
 	Address: $address;
@@ -22,9 +23,10 @@ if(isset($_POST['register'])){
 	Gender: $gender;
 	Hobbies :$hobbies;
 	Date of birth: $dob;
+    
 	</pre>";
 	
-	echo "<img src='uploads/<?php echo $img_name?>'>";
+	
 	 
 	
 	
