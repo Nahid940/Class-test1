@@ -17,14 +17,14 @@
             -moz-transition: all 0.30s ease-in-out;
             -ms-transition: all 0.30s ease-in-out;
             -o-transition: all 0.30s ease-in-out;
-            /*outline: none;*/
-            /*padding: 3px 0px 3px 3px;*/
-            /*margin: 5px 1px 3px 0px;*/
+            outline: none;
+            padding: 3px 0px 3px 3px;
+            margin: 5px 1px 3px 0px;
             /*border: 1px solid #DDDDDD;*/
         }
 
         input[type=text]:focus, input[type=email]:focus,input[type=password]:focus{
-            box-shadow: 0 0 5px green;
+            box-shadow: 0 0 10px black;
             padding: 3px 0px 3px 3px;
             margin: 5px 1px 3px 0px;
             border: 1px solid green;

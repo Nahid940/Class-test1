@@ -1,35 +1,35 @@
 <?php
-if(isset($_POST['register'])){
-	$name=$_POST['name'];
-	$email=$_POST['email'];
-	$address=$_POST['address'];
-	$mobile=$_POST['mobile'];
-	$gender=$_POST['optradio'];
-	$hobbies=implode('|',$_POST['hobby']);
-	
-	 $tmp_name=$_FILES['image']['tmp_name'];
-     $img_name= $_FILES['image']['name'];
-
-     //Upload file to the specific folder
-     move_uploaded_file($tmp_name,'upload/'.$img_name);
-	 
-	 $dob=$_POST['day']."-".$_POST['month']."-".$_POST['year'];
-//	 echo "<pre>
-//    Profile picture :<img src='upload/$img_name' height='150px' width='150px'>
-//	Name: $name;
-//	Email: $email;
-//	Address: $address;
-//	Mobile: $mobile;
-//	Gender: $gender;
-//	Hobbies :$hobbies;
-//	Date of birth: $dob;
+//if(isset($_POST['register'])){
+//	$name=$_POST['name'];
+//	$email=$_POST['email'];
+//	$address=$_POST['address'];
+//	$mobile=$_POST['mobile'];
+//	$gender=$_POST['optradio'];
+//	$hobbies=implode('|',$_POST['hobby']);
 //
-//	</pre>";
-	
-	
-	 
-	
-	
+//	 $tmp_name=$_FILES['image']['tmp_name'];
+//     $img_name= $_FILES['image']['name'];
+//
+//     //Upload file to the specific folder
+//     move_uploaded_file($tmp_name,'upload/'.$img_name);
+//
+//	 $dob=$_POST['day']."-".$_POST['month']."-".$_POST['year'];
+
+//
+//$img_name=$_POST['image']['name'];
+//$_POST['pic']=$img_name;
+
+	 //$db=new PDO('mysql:dbhost=localhost;dbname=php62',USERNAME: 'root',);
+	 $db = new PDO('mysql:host=localhost;dbname=php62;charset=utf8mb4', username: 'root', passwd:'');
+	 $query="INSERT INTO `users` (`id`, `name`, `email`, `phone`, `address`, `gender`, `hobbies`, `image`, `dob`, `created_at`, `modified_at`, `deleted_at`) VALUES
+      (NULL, '".$_POST['name']."', '".$_POST['email']."', '".$_POST['phone']."', '".$_POST['mobile']."', '".$_POST['gender']."', '".$_POST['hobbies']."', '".$_POST['$img_name']."', '".$_POST['$db']."', '', '', '');";
+
+    $result = $db->exec($query);
+
+    if($result==true){
+echo "Done";
+//    }
+
 }
 ?>
 <!doctype html>
