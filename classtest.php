@@ -11,6 +11,25 @@
         .width{
             width: 50%;
         }
+
+        input[type=text], input[type=email],input[type=password] {
+            -webkit-transition: all 0.30s ease-in-out;
+            -moz-transition: all 0.30s ease-in-out;
+            -ms-transition: all 0.30s ease-in-out;
+            -o-transition: all 0.30s ease-in-out;
+            /*outline: none;*/
+            /*padding: 3px 0px 3px 3px;*/
+            /*margin: 5px 1px 3px 0px;*/
+            /*border: 1px solid #DDDDDD;*/
+        }
+
+        input[type=text]:focus, input[type=email]:focus,input[type=password]:focus{
+            box-shadow: 0 0 5px green;
+            padding: 3px 0px 3px 3px;
+            margin: 5px 1px 3px 0px;
+            border: 1px solid green;
+        }
+
     </style>
 </head>
 <body>
@@ -19,6 +38,7 @@
     <h2></h2>
 <!--    <div class="col-md-3"></div>-->
 <!--    <div class="col-md-6">-->
+    <div class="jumbotron">
         <form class="form-horizontal" action="register.php" method="post" enctype="multipart/form-data">
             <div class="form-group ">
                 <label for="name">Enter your name:</label>
@@ -68,16 +88,16 @@
             <div class="form-group">
                <table>
                    <tr>
-                       <td><label for="hobby" >Choose your hobbies:</label></td>
+                       <td><label for="hobby" >Choose your hobbies : </label></td>
                        <td>
                            <div class="checkbox-inline">
-                    <label><input type="checkbox" name="hobby[]" value="Cricket">Cricket1</label>
+                    <label> <input type="checkbox" name="hobby[]" value="Cricket"> Cricket1</label>
                 </div>
                 <div class="checkbox-inline">
-                    <label><input type="checkbox" name="hobby[]"  value="Singing">Singing</label>
+                    <label> <input type="checkbox" name="hobby[]"  value="Singing"> Singing</label>
                 </div>
                 <div class="checkbox-inline">
-                    <label><input type="checkbox" name="hobby[]" value="Dancing" >Dancing</label>
+                    <label> <input type="checkbox" name="hobby[]" value="Dancing" > Dancing</label>
                 </div>
                        </td>
                    </tr>
@@ -98,9 +118,10 @@
             </div>
 
             <div class="form-group">
-                <label for="" >Choose your Date of birth:</label>
+
                <table>
                    <tr>
+                       <td><label for="" >Choose your Date of birth : </label></td>
                        <td><select class="form-control" id="date" name="day">
                     <option >Day</option>
                     <?php
@@ -153,9 +174,10 @@
 
             <div class="form-group pull-right ">
                 <button type="submit" class="btn btn-success" name="register">Register me</button>
-                <button type="submit"  class="btn btn-danger" name="Reset">Reset</button>
+                <button type="reset"  class="btn btn-danger" name="Reset">Reset</button>
             </div>
         </form>
+    </div>
 <!--    </div>-->
 
 </div>
